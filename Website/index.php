@@ -107,6 +107,10 @@
 
 
         <!-- Contact -->
+
+        <div class= "container has-text-centered ">
+            <h1 class="title"> Contact </h1>
+        </div>
         <div class="field">
   <label class="label">Name</label>
   <div class="control">
@@ -117,7 +121,7 @@
 <div class="field">
   <label class="label">Username</label>
   <div class="control has-icons-left has-icons-right">
-    <input class="input is-success" type="text" placeholder="Text input" value="bulma">
+    <input class="input " type="text" placeholder="Text input" >
     <span class="icon is-small is-left">
       <i class="fas fa-user"></i>
     </span>
@@ -131,7 +135,7 @@
 <div class="field">
   <label class="label">Email</label>
   <div class="control has-icons-left has-icons-right">
-    <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+    <input class="input " type="email" placeholder="Email input" >
     <span class="icon is-small is-left">
       <i class="fas fa-envelope"></i>
     </span>
