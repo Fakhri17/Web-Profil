@@ -57,7 +57,7 @@
 
     ];
 
-       $contact [ [
+       $contact = [ [
 
        ] ];
          
