@@ -3,8 +3,9 @@
         <title></title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="css\style.css">
+        <link rel="stylesheet" type="text/css" href="css\bulma.css">
+       
         
     </head>
     <body>
@@ -26,12 +27,50 @@
            
         ] ];
 
-        $skill = [ [ 
+        $skills = [ 
+          [ 
+            'skill' => 'C++',
+            'persen' => '<progress class="progress is-link" value="60" max="100">20%</progress>',
+            'space' => '<br>',
+            
+        ],
+        [
+            'skill' => 'HTML',
+            'persen' => '<progress class="progress is-link" value="40" max="100">20%</progress>',
+            'space' => '<br>',
+        ],
+        [
+          'skill' => 'CSS',
+          'persen' => '<progress class="progress is-link" value="40" max="100">20%</progress>',
+          'space' => '<br>',
 
-          'web' => ' HTML CSS JS',
-          'data' => 'JAVA PHP C++ '
-           
-        ] ];
+      ],
+            [
+              'skill' => 'JAVA',
+              'persen' => '<progress class="progress is-link" value="55" max="100">20%</progress>',
+              'space' => '<br>',
+
+          ],
+          [
+            'skill' => 'PHP',
+            'persen' => '<progress class="progress is-link" value="45" max="100">20%</progress>',
+            'space' => '<br>',
+
+        ],
+        [
+          'skill' => 'BULMA',
+          'persen' => '<progress class="progress is-link" value="50" max="100">20%</progress>',
+          'space' => '<br>',
+
+      ],
+      [
+        'skill' => 'EDITING',
+        'persen' => '<progress class="progress is-link" value="70" max="100">20%</progress>',
+        'space' => '<br>',
+
+],
+
+    ];
 
         $education = [ 
           [ 
@@ -39,12 +78,20 @@
             'deggre' => 'Siswa',
             'scholl' => 'SDN Benowo 1',
             'location' => 'Jl Raya Benowo No 71, Pakal, Surabaya',
+            'div' => ' <div class="column is-4">',
+            'mesage' => '<div class="message-header">',
+            'article' => '<article class="message is-info">',
+            'imsch' => '<img src="img\Benowo.jpg">',
         ],
         [
             'year' => '2015 - 2018',
             'deggre' => 'Siswa',
             'scholl' => 'SMPN 14 Surabaya',
             'location' => 'Jl. Jurang Kuping, Pakal, Surabaya',
+            'div' => ' <div class="column is-4">',
+            'mesage' => '<div class="message-header">',
+            'article' => '<article class="message is-info">',
+            'imsch' => '<img src="img\smp14.jpg">',
 
         ],
         [
@@ -52,65 +99,154 @@
           'deggre' => 'Siswa',
           'scholl' => 'SMKN 2  Surabaya',
           'location' => 'Jl. Tentara Genie Pelajar No.26, Sawahan, Surabaya',
+          'div' => ' <div class="column is-4">',
+          'mesage' => '<div class="message-header">',
+          'article' => '<article class="message is-info">',
+          'imsch' => '<img src="img\smk2.jpg">',
 
       ],
 
     ];
 
-       $contact = [ [
-
-       ] ];
          
         ?>
 
 
          <!-- Navbar -->
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="https://bulma.io">
-      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
-    </a>
+         <nav class="navbar is-dark is-fixed-top">
+      <div class="container">
+        <div class="navbar-brand">
+          <div class="navbar-item"  style="font-weight:bold;">
+            <img src="img\foto.png">
+       </div>
 
-    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-          
-  <?php foreach ($mainmenu as $key => $value): ?>
-  <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start">
-      <a class="navbar-item">
+          <span class="navbar-burger burger" data-target="navMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+
+        <?php foreach ($mainmenu as $key => $value): ?>
+        <div id="navMenu" class="navbar-menu">
+          <div class="navbar-end">
+          <a class="navbar-item" href=#profile>
       <?php echo $value['profile'] ?> </a>
-      <a class="navbar-item">
+      <a class="navbar-item" href="#skills">
       <?php echo $value['skill'] ?> </a>
-      <a class="navbar-item">
+      <a class="navbar-item" href="#education">
       <?php echo $value['education'] ?> </a>
       <a class="navbar-item">
       <?php echo $value['portfolio'] ?> </a>
-      <a class="navbar-item">
+      <a class="navbar-item" href=#contact>
       <?php echo $value['contact'] ?> </a>
-    </div>
-    <?php endforeach ?>
-  </div>
-  </nav>
+          </div>
+          <?php endforeach ?>
+        </div>
+      </div>
+    </nav>
+
+    <script type="text/javascript">
+      (function() {
+        var burger = document.querySelector('.burger');
+        var nav = document.querySelector('#'+burger.dataset.target);
+        burger.addEventListener('click', function(){
+          burger.classList.toggle('is-active');
+          nav.classList.toggle('is-active');
+        });
+      })();
+    </script>
+
           <!-- End Navbar -->
 
           <!-- Header -->
-<?php  include 'header.php'; ?>
+                <?php  include 'header.php'; ?>
+          </div>
 <br>
           <!--  End Header -->
 
           <!-- Profile -->
+          <div class= "container has-text-centered " id="profile">
+          <h1 class=title > Profil </h1> </div>
+          <br>
+          <div class="card-image has-text-centered">
+        <figure class="image is-96x96 is-inline-block">
+            <img  src="img\me.jpg"/>
+        </figure>
+    </div>
+<br>
+    <br>
+
+    <?php foreach ($profile as $key => $value): ?> 
+    <div class="container">
+  <div class="notification is-primary">
+    <div class="textpf">
+   <h1> Name : <strong><?php echo $value['nama'] ?></strong>
+   <h1> Birth : <strong><?php echo $value['ttl'] ?></strong> 
+   <h1> Age : <strong><?php echo $value['age'] ?></strong> 
+   <h1> Address : <strong><?php echo $value['alamat'] ?></strong> 
+   <h1> Hobby : <strong><?php echo $value['hoby'] ?></strong>
+    </div> 
+  </div>
+</div>
+      <?php endforeach ?>
+    <br><br>
           <!-- End Profile -->
 
+      
+        <!-- Skills -->
+        <div class= "container has-text-centered " id="skills">
+          <h1 class=title > Skills </h1> </div> <br>
+          <?php foreach ($skills as $key => $value): ?>
+   <div class="container">
+     <strong> <?php echo $value['skill'] ?>
+       <?php echo $value['persen'] ?>
+       <?php echo $value['space'] ?>
+    </div>
+        <?php endforeach ?>
+    <br><br>
+        <!-- End Skills -->
 
+        <!-- Education -->
+        <div class= "container has-text-centered " id="education">
+          <h1 class=title > Education </h1> </div> <br>
+        
+        <div class="container">
+       
+       
+              <div class="columns is-mobile">
+
+               <?php foreach ($education as $key => $value): ?>
+               <?php echo $value['div'] ?> 
+               <?php echo $value['article'] ?>
+               <?php echo $value['mesage'] ?> <?php echo $value['scholl'] ?></div>
+                     <div class="message-body">
+                        <div class="subtitle"> 
+                        <div class="card-image has-text-centered">
+                                     <figure class="image is-128x128 is-inline-block">
+                                        <?php echo $value['imsch'] ?>
+                                      </figure>
+                                      </div>
+                      Year : <?php echo $value['year'] ?> <br> <br>
+                         Status : <?php echo $value['deggre'] ?> <br> <br>
+                         Location : <?php echo $value['location'] ?> <br> <br>
+                        </div>
+                    </div>
+               </article>
+               </div>
+               <?php endforeach ?>
+
+        </div>
+         </div>
+         <br><br>   
+        <!-- End Education -->
+        
         <!-- Contact -->
-
-        <div class= "container has-text-centered ">
+  <div class= "container has-text-centered " id="contact">
             <h1 class="title"> Contact </h1>
         </div>
+        
+        <div class="container">
         <div class="field">
   <label class="label">Name</label>
   <div class="control">
@@ -118,72 +254,16 @@
   </div>
 </div>
 
-<div class="field">
-  <label class="label">Username</label>
-  <div class="control has-icons-left has-icons-right">
-    <input class="input " type="text" placeholder="Text input" >
-    <span class="icon is-small is-left">
-      <i class="fas fa-user"></i>
-    </span>
-    <span class="icon is-small is-right">
-      <i class="fas fa-check"></i>
-    </span>
-  </div>
-  
-</div>
-
-<div class="field">
-  <label class="label">Email</label>
-  <div class="control has-icons-left has-icons-right">
-    <input class="input " type="email" placeholder="Email input" >
-    <span class="icon is-small is-left">
-      <i class="fas fa-envelope"></i>
-    </span>
-    <span class="icon is-small is-right">
-      <i class="fas fa-exclamation-triangle"></i>
-    </span>
-  </div>
-  
-</div>
-
-<div class="field">
-  <label class="label">Subject</label>
+        <div class="field">
+  <label class="label">Name</label>
   <div class="control">
-    <div class="select">
-      <select>
-        <option>Select dropdown</option>
-        <option>With options</option>
-      </select>
-    </div>
+    <input class="input" type="text" placeholder="Text input">
   </div>
 </div>
-
 <div class="field">
   <label class="label">Message</label>
   <div class="control">
-    <textarea class="textarea" placeholder="Textarea"></textarea>
-  </div>
-</div>
-
-<div class="field">
-  <div class="control">
-    <label class="checkbox">
-      <input type="checkbox">
-      I agree to the <a href="#">terms and conditions</a>
-    </label>
-  </div>
-</div>
-
-<div class="field">
-  <div class="control">
-    <label class="radio">
-      <input type="radio" name="question">
-      Yes
-    </label>
-    <label class="radio">
-      <input type="radio" name="question">
-      No
-    </label>
+    <textarea class="textarea is-mobile" placeholder="Textarea"></textarea>
   </div>
 </div>
 
@@ -191,13 +271,16 @@
   <div class="control">
     <button class="button is-link">Submit</button>
   </div>
-  <div class="control">
-    <button class="button is-text">Cancel</button>
-  </div>
+ 
 </div>
-        <!-- Contact -->
+    </div>
+<br>
+<br>
+        <!--  End Contact -->
           <!-- Footer -->
+          <div class="footerss">
           <?php include 'footer.php'; ?>
+          </div>
           <!-- End Footer -->
         
           
