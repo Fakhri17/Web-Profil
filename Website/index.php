@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css\style.css">
         <link rel="stylesheet" type="text/css" href="css\bulma.css">
+        <link rel="stylesheet" type="text/css" href="dist\css\lightbox.css">
        
         
     </head>
@@ -30,13 +31,13 @@
         $skills = [ 
           [ 
             'skill' => 'C++',
-            'persen' => '<progress class="progress is-link" value="60" max="100">20%</progress>',
+            'persen' => '<progress class="progress is-link" value="60" max="100"></progress>',
             'space' => '<br>',
             
         ],
         [
             'skill' => 'HTML',
-            'persen' => '<progress class="progress is-link" value="40" max="100">20%</progress>',
+            'persen' => '<progress class="progress is-link" value="40" max="100"></progress>',
             'space' => '<br>',
         ],
         [
@@ -47,25 +48,25 @@
       ],
             [
               'skill' => 'JAVA',
-              'persen' => '<progress class="progress is-link" value="55" max="100">20%</progress>',
+              'persen' => '<progress class="progress is-link" value="55" max="100"></progress>',
               'space' => '<br>',
 
           ],
           [
             'skill' => 'PHP',
-            'persen' => '<progress class="progress is-link" value="45" max="100">20%</progress>',
+            'persen' => '<progress class="progress is-link" value="45" max="100"></progress>',
             'space' => '<br>',
 
         ],
         [
           'skill' => 'BULMA',
-          'persen' => '<progress class="progress is-link" value="50" max="100">20%</progress>',
+          'persen' => '<progress class="progress is-link" value="50" max="100"></progress>',
           'space' => '<br>',
 
       ],
       [
         'skill' => 'EDITING',
-        'persen' => '<progress class="progress is-link" value="70" max="100">20%</progress>',
+        'persen' => '<progress class="progress is-link" value="70" max="100"></progress>',
         'space' => '<br>',
 
 ],
@@ -116,9 +117,9 @@
          <nav class="navbar is-dark is-fixed-top">
       <div class="container">
         <div class="navbar-brand">
-          <div class="navbar-item"  style="font-weight:bold;">
+          <a class="navbar-item" href="#home">
             <img src="img\foto.png">
-       </div>
+  </a>
 
           <span class="navbar-burger burger" data-target="navMenu">
             <span></span>
@@ -136,7 +137,7 @@
       <?php echo $value['skill'] ?> </a>
       <a class="navbar-item" href="#education">
       <?php echo $value['education'] ?> </a>
-      <a class="navbar-item">
+      <a class="navbar-item" href="#portfolio">
       <?php echo $value['portfolio'] ?> </a>
       <a class="navbar-item" href=#contact>
       <?php echo $value['contact'] ?> </a>
@@ -180,7 +181,7 @@
     <?php foreach ($profile as $key => $value): ?> 
     <div class="container">
   <div class="notification is-primary">
-    <div class="textpf">
+    <div class="textpf has-text-justified is-family-monospace">
    <h1> Name : <strong><?php echo $value['nama'] ?></strong>
    <h1> Birth : <strong><?php echo $value['ttl'] ?></strong> 
    <h1> Age : <strong><?php echo $value['age'] ?></strong> 
@@ -240,6 +241,38 @@
          </div>
          <br><br>   
         <!-- End Education -->
+
+
+        <!--  Portolio -->
+        <div class= "container has-text-centered " id="portfolio">
+            <h1 class="title"> Portfolio </h1>
+        </div> <br> <br>
+
+        <div class="container">
+        <div class="tile is-ancestor">
+  <div class="tile is-parent">
+    <article class="tile is-child box">
+    <a href="img\image2.jpg" data-lightbox="continue" data-title="Sistem Izin dengan PHP">
+     <img src="img\image2.jpg" alt="image"></a>
+    </article>
+  </div>
+  <div class="tile is-parent">
+    <article class="tile is-child box">
+    <a href="img\image.jpg" data-lightbox="continue" data-title="Web Profil 1">
+     <img src="img\image.jpg" alt="image"></a>
+    </article>
+  </div>
+  <div class="tile is-parent">
+    <article class="tile is-child box">
+    <a href="img\image3.jpg" data-lightbox="continue" data-title="Web Biodata">
+      <img src="img\image3.jpg" alt="image"></a>
+    </article>
+  </div>
+</div>
+    </div>
+
+        <br> <br> 
+        <!-- End Portfolio --> 
         
         <!-- Contact -->
   <div class= "container has-text-centered " id="contact">
@@ -255,9 +288,9 @@
 </div>
 
         <div class="field">
-  <label class="label">Name</label>
+  <label class="label">Telp</label>
   <div class="control">
-    <input class="input" type="text" placeholder="Text input">
+    <input class="input" type="number" placeholder="Telp">
   </div>
 </div>
 <div class="field">
@@ -269,6 +302,7 @@
 
 <div class="field is-grouped">
   <div class="control">
+
     <button class="button is-link">Submit</button>
   </div>
  
@@ -277,6 +311,9 @@
 <br>
 <br>
         <!--  End Contact -->
+
+        
+        <!-- End Galeri -->
           <!-- Footer -->
           <div class="footerss">
           <?php include 'footer.php'; ?>
@@ -284,6 +321,17 @@
           <!-- End Footer -->
         
           
+
+
+      <script src="dist/js/lightbox-plus-jquery.js"> </script>
+      <script>
+    lightbox.option({
+      'resizeDuration': 200,
+      'fadeDuration' : 500,
+      'wrapAround': true,
+      'alwaysShowNavOnTouchDevices' : true
+    })
+</script>
 
     </body>
 </html>

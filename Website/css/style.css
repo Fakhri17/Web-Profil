@@ -1,3 +1,8 @@
+* {
+  scroll-behavior: smooth;
+}
+
+
 .footerss{
     left: 0;
     bottom: 0;
@@ -34,8 +39,10 @@
   }
 
   .textpf{
-      text-align: justify;
+      
       font-size: 21px;
       padding-left: 20px;
       line-height: 50px;
   }
+
+  

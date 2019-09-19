@@ -74,5 +74,9 @@
   },
   "style": "bulma/css/bulma.min.css",
   "unpkg": "css/bulma.css",
-  "version": "0.7.5"
+  "version": "0.7.5",
+  "dependencies": {
+    "lightbox2": "^2.11.1",
+    "micromodal": "^0.4.2"
+  }
 }
