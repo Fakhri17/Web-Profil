@@ -31,43 +31,47 @@
         $skills = [ 
           [ 
             'skill' => 'C++',
-            'persen' => '<progress class="progress is-link" value="60" max="100"></progress>',
-            'space' => '<br>',
+            'persen' => '60',
+            'tampil' => '60%',
+            
             
         ],
         [
             'skill' => 'HTML',
-            'persen' => '<progress class="progress is-link" value="40" max="100"></progress>',
-            'space' => '<br>',
+            'persen' => '40',
+            'tampil' => '40%',
+            
         ],
         [
           'skill' => 'CSS',
-          'persen' => '<progress class="progress is-link" value="40" max="100">20%</progress>',
-          'space' => '<br>',
+          'persen' => '40',
+          'tampil' => '40%',
+          
 
       ],
             [
               'skill' => 'JAVA',
-              'persen' => '<progress class="progress is-link" value="55" max="100"></progress>',
-              'space' => '<br>',
-
+              'persen' => '55',
+              'tampil' => '55%',
+              
           ],
           [
             'skill' => 'PHP',
-            'persen' => '<progress class="progress is-link" value="45" max="100"></progress>',
-            'space' => '<br>',
-
+            'persen' => '45',
+            'tampil' => '45%',
+           
         ],
         [
           'skill' => 'BULMA',
-          'persen' => '<progress class="progress is-link" value="50" max="100"></progress>',
-          'space' => '<br>',
-
+          'persen' => '50',
+          'tampil' => '50%',
+         
       ],
       [
         'skill' => 'EDITING',
-        'persen' => '<progress class="progress is-link" value="70" max="100"></progress>',
-        'space' => '<br>',
+        'persen' => '70',
+        'tampil' => '70%',
+        
 
 ],
 
@@ -79,31 +83,22 @@
             'deggre' => 'Siswa',
             'scholl' => 'SDN Benowo 1',
             'location' => 'Jl Raya Benowo No 71, Pakal, Surabaya',
-            'div' => ' <div class="column is-4">',
-            'mesage' => '<div class="message-header">',
-            'article' => '<article class="message is-info">',
-            'imsch' => '<img src="img\Benowo.jpg">',
+            'imsch' => 'img\Benowo.jpg',
         ],
         [
             'year' => '2015 - 2018',
             'deggre' => 'Siswa',
             'scholl' => 'SMPN 14 Surabaya',
-            'location' => 'Jl. Jurang Kuping, Pakal, Surabaya',
-            'div' => ' <div class="column is-4">',
-            'mesage' => '<div class="message-header">',
-            'article' => '<article class="message is-info">',
-            'imsch' => '<img src="img\smp14.jpg">',
+            'location' => 'Jl. Jurang Kuping, Pakal, Surabaya',            
+            'imsch' => 'img\smp14.jpg',
 
         ],
         [
           'year' => '2015 - Sekarang',
           'deggre' => 'Siswa',
           'scholl' => 'SMKN 2  Surabaya',
-          'location' => 'Jl. Tentara Genie Pelajar No.26, Sawahan, Surabaya',
-          'div' => ' <div class="column is-4">',
-          'mesage' => '<div class="message-header">',
-          'article' => '<article class="message is-info">',
-          'imsch' => '<img src="img\smk2.jpg">',
+          'location' => 'Jl. Tentara Genie Pelajar No.26, Sawahan, Surabaya',         
+          'imsch' => 'img\smk2.jpg',
 
       ],
 
@@ -201,8 +196,12 @@
           <?php foreach ($skills as $key => $value): ?>
    <div class="container">
      <strong> <?php echo $value['skill'] ?>
-       <?php echo $value['persen'] ?>
-       <?php echo $value['space'] ?>
+     <h1 class="subtitle has-text-centered"> <?php echo $value['tampil'] ?></h1></strong>
+    
+     <progress class="progress is-link" value="<?php echo $value['persen'] ?>" max="100"> 
+       
+     </progress>
+        <br>
     </div>
         <?php endforeach ?>
     <br><br>
@@ -218,17 +217,18 @@
               <div class="columns is-mobile">
 
                <?php foreach ($education as $key => $value): ?>
-               <?php echo $value['div'] ?> 
-               <?php echo $value['article'] ?>
-               <?php echo $value['mesage'] ?> <?php echo $value['scholl'] ?></div>
+               <div class="column is-4"> 
+               <article class="message is-info">
+               <div class="message-header"> <?php echo $value['scholl'] ?></div>
                      <div class="message-body">
                         <div class="subtitle"> 
+                       
                         <div class="card-image has-text-centered">
                                      <figure class="image is-128x128 is-inline-block">
-                                        <?php echo $value['imsch'] ?>
+                                        <img src="<?php echo $value['imsch'] ?>" >
                                       </figure>
                                       </div>
-                      Year : <?php echo $value['year'] ?> <br> <br>
+                         Year   : <?php echo $value['year'] ?> <br> <br>
                          Status : <?php echo $value['deggre'] ?> <br> <br>
                          Location : <?php echo $value['location'] ?> <br> <br>
                         </div>
