@@ -110,10 +110,10 @@
         [
 
           'judul' => 'Web Portfolio',
-          'sub' => 'Pembuatan Web Portfolio Menggunakan framework laravel',
+          'sub' => 'Pembuatan Web dengan HTML + CSS',
           'galeri'=> 'porto',
           'imgweb' => 'img\image.jpg',
-          'capt' => ' Tampilan Pertama',
+          'capt' => ' wEB Portfolio bostrap',
           
           
 
@@ -122,9 +122,9 @@
         [
           'judul' => 'Edit Foto',
           'sub' => 'Editing Foto Menggunakan Aplikasi Editing (Pixellab, Picsart, PS Touch)',
-          'galeri'=> '',
-          'imgweb' => '',
-          'capt' => ' ',
+          'galeri'=> 'edit',
+          'imgweb' => 'img\bio.jpg',
+          'capt' => ' Pembuatan desain sticker',
           
         ],
 
@@ -310,9 +310,12 @@
              
            <a href="img\image2.jpg" data-lightbox="porto" data-title="masuk"></a>
            <a href="img\image3.jpg" data-lightbox="porto" data-title="masuk"></a>
+
+           <a href="img\light.jpg" data-lightbox="edit" data-title="Hasil edit Lightroom CC"></a>
+           <a href="img\rpl.jpg" data-lightbox="edit" data-title="Hasil edit desain kelas RPL"></a>
             
 
-          <a href=""></a>
+         
 
         <br> <br> 
         <!-- End Portfolio --> 
