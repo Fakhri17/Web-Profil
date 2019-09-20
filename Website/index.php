@@ -6,6 +6,8 @@
         <link rel="stylesheet" type="text/css" href="css\style.css">
         <link rel="stylesheet" type="text/css" href="css\bulma.css">
         <link rel="stylesheet" type="text/css" href="dist\css\lightbox.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+       
        
         
     </head>
@@ -94,7 +96,7 @@
 
         ],
         [
-          'year' => '2015 - Sekarang',
+          'year' => '2018 - Sekarang',
           'deggre' => 'Siswa',
           'scholl' => 'SMKN 2  Surabaya',
           'location' => 'Jl. Tentara Genie Pelajar No.26, Sawahan, Surabaya',         
@@ -104,8 +106,43 @@
 
     ];
 
+        $portfolio = [ 
+        [
+
+          'judul' => 'Web Portfolio',
+          'sub' => 'Pembuatan Web Portfolio Menggunakan framework laravel',
+          'galeri'=> 'porto',
+          'imgweb' => 'img\image.jpg',
+          'capt' => ' Tampilan Pertama',
+          
+          
+
+        ],
+
+        [
+          'judul' => 'Edit Foto',
+          'sub' => 'Editing Foto Menggunakan Aplikasi Editing (Pixellab, Picsart, PS Touch)',
+          'galeri'=> '',
+          'imgweb' => '',
+          'capt' => ' ',
+          
+        ],
+
+        [
+          'judul' => 'Edit Video',
+          'sub' => 'Editing Video Menggunakan Aplikasi Editing (KineMaster dan Filmora9)',
+          'galeri'=> '',
+          'imgweb' => '',
+          'capt' => ' ',
+          
+          
+        ],
+      
+      ];
+
          
         ?>
+        
 
 
          <!-- Navbar -->
@@ -193,6 +230,7 @@
         <!-- Skills -->
         <div class= "container has-text-centered " id="skills">
           <h1 class=title > Skills </h1> </div> <br>
+
           <?php foreach ($skills as $key => $value): ?>
    <div class="container">
      <strong> <?php echo $value['skill'] ?>
@@ -206,6 +244,7 @@
         <?php endforeach ?>
     <br><br>
         <!-- End Skills -->
+
 
         <!-- Education -->
         <div class= "container has-text-centered " id="education">
@@ -248,72 +287,83 @@
             <h1 class="title"> Portfolio </h1>
         </div> <br> <br>
 
-        <div class="container">
-        <div class="tile is-ancestor">
-  <div class="tile is-parent">
-    <article class="tile is-child box">
-    <a href="img\image2.jpg" data-lightbox="continue" data-title="Sistem Izin dengan PHP">
-     <img src="img\image2.jpg" alt="image"></a>
-    </article>
-  </div>
-  <div class="tile is-parent">
-    <article class="tile is-child box">
-    <a href="img\image.jpg" data-lightbox="continue" data-title="Web Profil 1">
-     <img src="img\image.jpg" alt="image"></a>
-    </article>
-  </div>
-  <div class="tile is-parent">
-    <article class="tile is-child box">
-    <a href="img\image3.jpg" data-lightbox="continue" data-title="Web Biodata">
-      <img src="img\image3.jpg" alt="image"></a>
-    </article>
-  </div>
-</div>
-    </div>
+      
+        <div class="container">    
+        
+        <div class="tile is-ancestor">       
+        <?php foreach ($portfolio as $key => $value): ?>
+          <div class="tile is-parent ">         
+            <article class="tile is-child box">         
+            <p class="title has-text-centered"> <?php echo $value['judul'] ?> </p>
+            <p class="subtitle has-text-centered"> <?php echo $value['sub'] ?> </p>
+            <a class="button is-link" href="<?php echo $value ['imgweb'] ?>" data-lightbox="<?php echo $value ['galeri'] ?>" 
+            data-title="<?php echo $value ['capt'] ?>">Tampilkan</a>
+            </article>
+          </div>
+          <?php endforeach ?>
+          </div>
+          </div>
+            
+
+
+             <!-- Galery -->
+             
+           <a href="img\image2.jpg" data-lightbox="porto" data-title="masuk"></a>
+           <a href="img\image3.jpg" data-lightbox="porto" data-title="masuk"></a>
+            
+
+          <a href=""></a>
 
         <br> <br> 
         <!-- End Portfolio --> 
-        
+
         <!-- Contact -->
   <div class= "container has-text-centered " id="contact">
             <h1 class="title"> Contact </h1>
         </div>
-        
-        <div class="container">
-        <div class="field">
-  <label class="label">Name</label>
-  <div class="control">
-    <input class="input" type="text" placeholder="Text input">
-  </div>
-</div>
+<form>
+     <div class="container">
+           <div class="field">
+              <label class="label">Name</label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="Text input">
+                </div>
+             </div>
 
-        <div class="field">
-  <label class="label">Telp</label>
-  <div class="control">
-    <input class="input" type="number" placeholder="Telp">
-  </div>
-</div>
-<div class="field">
-  <label class="label">Message</label>
-  <div class="control">
-    <textarea class="textarea is-mobile" placeholder="Textarea"></textarea>
-  </div>
-</div>
+               <div class="field">
+                <label class="label">Telp</label>
+                   <div class="control">
+                    <input class="input" type="number" placeholder="Telp">
+                  </div>
+                </div>
 
-<div class="field is-grouped">
-  <div class="control">
+                <div class="field">
+                  <label class="label">Message</label>
+                  <div class="control">
+                    <textarea class="textarea is-mobile" placeholder="Textarea"></textarea>
+                  </div>
+                </div>
 
-    <button class="button is-link">Submit</button>
-  </div>
- 
-</div>
-    </div>
-<br>
-<br>
+          <div class="field is-grouped">
+            <div class="control">
+            <a class="button is-link" href="#ex1" rel="modal:open">Submit</a>
+            <input class="button is-link" type="reset" value="delete">
+            </div>      
+        </div>
+      </div>
+    </form>
+        <br>
+          <br>
+      
         <!--  End Contact -->
 
+        <!-- Modal -->
+        <div id="ex1" class="modal">
+  <p>Thanks for clicking. That felt good.</p>
+</div>
+
+
         
-        <!-- End Galeri -->
           <!-- Footer -->
           <div class="footerss">
           <?php include 'footer.php'; ?>
@@ -321,7 +371,7 @@
           <!-- End Footer -->
         
           
-
+        
 
       <script src="dist/js/lightbox-plus-jquery.js"> </script>
       <script>
@@ -331,7 +381,10 @@
       'wrapAround': true,
       'alwaysShowNavOnTouchDevices' : true
     })
-</script>
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+      
 
     </body>
 </html>

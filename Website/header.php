@@ -1,4 +1,4 @@
-<section class=" is-fullheight-with-navbar">
+<section class=" is-fullheight-with-navbar" id="home">
 <div class="banner">
 <img src="img/head.jpg" class="banner-image">
 <div class="text">
