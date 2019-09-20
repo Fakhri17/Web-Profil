@@ -113,7 +113,7 @@
           'sub' => 'Pembuatan Web dengan HTML + CSS',
           'galeri'=> 'porto',
           'imgweb' => 'img\image.jpg',
-          'capt' => ' wEB Portfolio bostrap',
+          'capt' => ' wEB Portfolio boostrap',
           
           
 
