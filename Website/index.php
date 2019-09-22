@@ -203,6 +203,7 @@
           <div class= "container has-text-centered " id="profile">
           <h1 class=title > Profil </h1> </div>
           <br>
+          
           <div class="card-image has-text-centered">
         <figure class="image is-96x96 is-inline-block">
             <img  src="img\me.jpg"/>
@@ -211,19 +212,22 @@
 <br>
     <br>
 
-    <?php foreach ($profile as $key => $value): ?> 
     <div class="container">
-  <div class="notification is-primary">
-    <div class="textpf has-text-justified is-family-monospace">
+  <div class="notification is-primary ">
+  <?php foreach ($profile as $key => $value): ?> 
+    <div class="textpf has-text-justified is-block-dekstop-only is-inline-touch is-family-monospace">
    <h1> Name : <strong><?php echo $value['nama'] ?></strong>
    <h1> Birth : <strong><?php echo $value['ttl'] ?></strong> 
    <h1> Age : <strong><?php echo $value['age'] ?></strong> 
    <h1> Address : <strong><?php echo $value['alamat'] ?></strong> 
    <h1> Hobby : <strong><?php echo $value['hoby'] ?></strong>
     </div> 
+    <?php endforeach ?>
   </div>
 </div>
-      <?php endforeach ?>
+
+
+     
     <br><br>
           <!-- End Profile -->
 
@@ -254,7 +258,7 @@
         <div class="container">
        
        
-              <div class="columns is-mobile">
+              <div class="columns is-dekstop">
 
                <?php foreach ($education as $key => $value): ?>
                <div class="column is-4"> 

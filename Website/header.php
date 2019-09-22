@@ -1,5 +1,6 @@
 <section class=" is-fullheight-with-navbar" id="home">
-<div class="banner">
+<div class="banner is-flex-mobile	
+flex">
 <img src="img/head.jpg" class="banner-image">
 <div class="text">
 <h2 style="font-size: 40px">Welcome to my web</h2>
