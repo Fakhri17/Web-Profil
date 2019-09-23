@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title> Tampilan </title>
-        <link rel="stylesheet" type="text/css" href="css\style.css">
-    <link rel="stylesheet" type="text/css" href="css\bulma.css">
-        <body>
+<?php include 'header.php'; ?>
             
         <div class= "container has-text-centered " id="contact">
             <h1 class="title"> Terima Kasih </h1>
         </div>
         <br>
         <br>
-  
- 
         <div class="container">
   <div class="notification is-primary">
     <div class="textpf has-text-justified is-family-monospace">

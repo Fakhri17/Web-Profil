@@ -184,7 +184,7 @@
         <div class="columns is-dekstop">
         
   <div class="column is-narrow">
-    <div class="box" style="width:200px;">
+    <div class="box"  >
     <div class="card-image has-text-centered">
             <figure class="image is-128x128 ">
                  <img src="<?php echo $value['imsch'] ?>" >
