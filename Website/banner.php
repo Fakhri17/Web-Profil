@@ -1,3 +1,5 @@
+<?php include 'header.php' ?>
+
 <section class=" is-fullheight-with-navbar" id="home">
 <div class="banner is-flex-mobile	
 flex">

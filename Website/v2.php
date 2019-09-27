@@ -1,210 +1,157 @@
 <?php include 'header.php'; ?>
 
          <!-- Navbar -->
-         <nav class="navbar is-dark is-fixed-top">
+ <nav class="navbar is-dark is-fixed-top">
       <div class="container">
         <div class="navbar-brand">
           <a class="navbar-item" href="#home">
-            <img src="img\foto.png">
-  </a>
-
+            <img  src="img\nav.png" width="100" height="80">
+          </a>
           <span class="navbar-burger burger" data-target="navMenu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-        </div>
+              <span></span>
+              <span></span>
+              <span></span>
+              </span>
+         </div>
 
-        <?php foreach ($mainmenu as $key => $value): ?>
+        
         <div id="navMenu" class="navbar-menu">
           <div class="navbar-end">
-          <a class="navbar-item" href=#profile>
-      <?php echo $value['profile'] ?> </a>
-      <a class="navbar-item" href="#skills">
-      <?php echo $value['skill'] ?> </a>
-      <a class="navbar-item" href="#education">
-      <?php echo $value['education'] ?> </a>
-      <a class="navbar-item" href="#portfolio">
-      <?php echo $value['portfolio'] ?> </a>
-      <a class="navbar-item" href=#contact>
-      <?php echo $value['contact'] ?> </a>
+               <a class="navbar-item" href=#profile>
+                  <?php echo $mainmenu['profile'] ?> 
+                </a>
+                <a class="navbar-item" href="#skills">
+                  <?php echo $mainmenu['skill'] ?> 
+                </a>
+                <a class="navbar-item" href="#education">
+                  <?php echo $mainmenu['education'] ?> 
+                </a>
+                <a class="navbar-item" href="#portfolio">
+                  <?php echo $mainmenu['portfolio'] ?>
+                </a>
+                <a class="navbar-item" href=#contact>
+                  <?php echo $mainmenu['contact'] ?>
+                </a>
           </div>
-          <?php endforeach ?>
         </div>
       </div>
-    </nav>
-
-    <script type="text/javascript">
-      (function() {
-        var burger = document.querySelector('.burger');
-        var nav = document.querySelector('#'+burger.dataset.target);
-        burger.addEventListener('click', function(){
-          burger.classList.toggle('is-active');
-          nav.classList.toggle('is-active');
-        });
-      })();
-    </script>
-
+  </nav>
           <!-- End Navbar -->
 
           <!-- Banner -->
                 <?php  include 'banner.php'; ?>
           </div>
-<br>
+          <br>
           <!--  End Banner -->
 
           <!-- Profile -->
-      <div id="profile">
+
  <div class="container">
-   <div class="columns is-dekstop">
+    <div class="columns is-dekstop">
+       <div class="column is-half">
+         <div class="card">
+             <br>
+            <h1 class="title has-text-centered" id="profile"> PROFIL </h1>
+                <div class="card-image has-text-centered">
+                    <figure class="image is-128x128 is-inline-block">
+                      <img  src="img\me.jpg"/>
+                    </figure>
+                </div>
 
-    <div class="column is-half">
-      <div class="card">
-
-       <br>
-       <h1 class="title has-text-centered"> PROFIL </h1>
-       <div class="card-image has-text-centered">
-        <figure class="image is-96x96 is-inline-block">
-            <img  src="img\me.jpg"/>
-        </figure>
-    </div>
-
-  <div class="card-content">
-    <div class="content subtitle">
-    <?php foreach ($profile as $key => $value): ?>
-     Nama saya <strong><?php echo $value['nama'] ?></strong>.
-     Saya lahir di <strong><?php echo $value['ttl'] ?></strong>.
-     Saat ini saya berumur <strong><?php echo $value['age']?></strong>.
-     Alamat rumah saya berada di <strong><?php echo $value['alamat'] ?></strong>.
-     Saya memiliki hobi <strong><?php echo $value['hoby']?></strong>
-     <br>
-     <br>
-     <?php endforeach ?>
-   </div>
-      </div>
-
-    </div>
-   </div>
+              <div class="card-content">
+                <div class="content subtitle ">
+                      Nama  <strong><?php echo $profile['nama'] ?></strong>.
+                      TTL   <strong><?php echo $profile['ttl'] ?></strong>.
+                      Umur <strong><?php echo $profile['age']?></strong>.
+                      Alamat <strong><?php echo $profile['alamat'] ?></strong>.
+                      Hobi<strong><?php echo $profile['hoby']?></strong>
+                 </div>
+              </div>
+            </div>
+          </div>
   
-   <div class="column is-half">
-      <div class="card">
-       <br>
-       <h1 class="title has-text-centered"> SOSMED </h1>
-       <div class="card-image has-text-centered">
-        <figure class="image is-96x96 is-inline-block">
-            <img  src="img\bio.jpg"/>
-        </figure>
-    </div>
-    <div class="card-content">
-    <div class="content subtitle">
-    <?php foreach ($sosmed as $key => $value): ?>
-    Visit my facebook <a href="<?php echo $value['fb'] ?>" target="_blank"><strong>VISIT</strong></a>.
-     Visit my instagram <strong><a href="<?php echo $value['ig'] ?>" target="_blank">VISIT</a></strong>.
-     Visit my whatsapp <strong><a href="<?php echo $value['wa'] ?>" target="_blank">VISIT</a></strong>.
-    Visit my telegram <strong><a href="<?php echo $value['tele'] ?>" target="_blank">VISIT</a></strong>.
-   Visit my github <strong><a href="<?php echo $value['git'] ?>" target="_blank">VISIT</a></strong>.
-   <br>
-   <br>
-   <p class="subtitle has-text-centered"> Thanks for all </p>
-     <?php endforeach ?>
-   </div>
-      </div>
-   </div>
-      </div>
-    </div>
-   </div>
-
-  </div>
-</div>
-    </div>
-<br>
-<br>
+        <div class="column is-half">
+          <div class="card">
+            <br>
+            <h1 class="title has-text-centered "> SOSMED </h1>
+                <div class="card-image has-text-centered">
+                    <figure class="image is-128x128 is-inline-block" ">
+                      <img  src="img\bio.jpg"/>
+                    </figure>
+                </div>
+            <div class="card-content">
+               <div class="content subtitle has-text-centered">
+                      <p> You can find me : </p>
+                      <a class="button" href="<?php echo $sosmed['fb'] ?>" target="_blank">Facebook</a>
+                      <a class="button" href="<?php echo $sosmed['ig'] ?>" target="_blank">Instagram</a>
+                      <a class="button" href="<?php echo $sosmed['wa'] ?>" target="_blank">Whatsapp</a>
+                      <a class="button" href="<?php echo $sosmed['tele'] ?>" target="_blank">Telegram</a>
+                      <a class="button" href="<?php echo $sosmed['git'] ?>" target="_blank">Github</a> 
+                 </div>
+              </div>
+           </div>
+         </div>
+     </div>
+   </div><br><br>
+      
 
         <!-- Skills -->
-<div class= "container has-text-centered " id="skills">
-          <h1 class=title > Programming </h1> </div> <br>
+    <div class= "container has-text-centered " id="skills">
+      <h1 class=title > Programming </h1> 
+    </div> <br>
 
-          <div class="container">
-       
-       
-       <div class="columns is-dekstop">
-
-        <?php foreach ($skills1 as $key => $value): ?>
-        <div class="column is-4"> 
-        <article class="message is-info">
-        <div class="message-header"> <?php echo $value['skill'] ?></div>
-              <div class="message-body">
-                 <div class="subtitle"> 
-                
-                 <div class="card-image has-text-centered">
-                              <figure class="image is-128x128 is-inline-block">
-                                 <img src="<?php echo $value['img'] ?>" >
-                               </figure>
-                               </div>
-                 Skill  : <?php echo $value['deskripsi'] ?> <br> <br>
-                 </div>
+  <div class="container">  
+     <div class="columns is-dekstop is-multiline">
+          <?php foreach ($skills as $key => $value): ?>
+           <div class="column is-4"> 
+             <article class="message is-info">
+                   <div class="message-header"> 
+                         <?php echo $value['skill'] ?>
+                   </div>
+                <div class="message-body">
+                    <div class="card-image has-text-centered">
+                        <figure class="image is-128x128 is-inline-block">
+                          <img src=" <?php echo $value['img'] ?>" >
+                        </figure>
+                      </div>
+                       <div class="subtitle">
+                         Skills  : <?php echo $value['deskripsi'] ?><br> <br>
+                       </div>
+                  </div>
+               </article>
              </div>
-        </article>
-        </div>
-        <?php endforeach ?>
- </div>
- <div class="columns is-dekstop">
-
-        <?php foreach ($skills2 as $key => $value): ?>
-        <div class="column is-4"> 
-        <article class="message is-info">
-        <div class="message-header"> <?php echo $value['skill'] ?></div>
-              <div class="message-body">
-                 <div class="subtitle"> 
-                
-                 <div class="card-image has-text-centered">
-                              <figure class="image is-128x128 is-inline-block">
-                                 <img src="<?php echo $value['img'] ?>" >
-                               </figure>
-                               </div>
-                  Skill  : <?php echo $value['deskripsi'] ?> <br> <br>
-
-                 </div>
-             </div>
-        </article>
-        </div>
-        <?php endforeach ?>
-  </div>
+            <?php endforeach ?>
+       </div>
     </div>
     <br><br>
         <!-- End Skills -->
 
 
         <!-- Education -->
-        <div class= "container has-text-centered " id="education">
-          <h1 class=title > Education </h1> </div> <br>
+    <div class= "container has-text-centered " id="education">
+          <h1 class=title > Education </h1> 
+     </div> <br>
         
-      <div class="container">
+   <div class="container">
       <?php foreach ($education as $key => $value): ?>
-        <div class="columns is-dekstop">
-        
-  <div class="column is-narrow">
-    <div class="box"  >
-    <div class="card-image has-text-centered">
-            <figure class="image is-128x128 ">
-                 <img src="<?php echo $value['imsch'] ?>" >
-                    </figure>
-
+      <div class="columns is-dekstop">
+         <div class="column">
+          <div class="box">
+            <div class="card-image has-text-centered">
+              <figure class="image is-3by1">
+                <img src="<?php echo $value['imsch'] ?>" >
+               </figure>
+             </div>
+               <p class="title is-4"><?php echo $value['scholl'] ?></p>
+               <p class="subtitle">Year : <?php echo $value['year'] ?></p>
+               <p class="subtitle">Deggre : <?php echo $value['deggre'] ?></p>
+               <p class="subtitle">Location : <?php echo $value['location'] ?></p>
+            </div>
           </div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="box">
-      <p class="title is-4"><?php echo $value['scholl'] ?></p>
-      <p class="subtitle">Year : <?php echo $value['year'] ?></p>
-      <p class="subtitle">Deggre : <?php echo $value['deggre'] ?></p>
-      <p class="subtitle">Location : <?php echo $value['location'] ?></p>
-    </div>
-  </div>
-</div>  
-<?php endforeach ?>     
-</div>
-         <br><br>   
+       </div>  
+       <?php endforeach ?>     
+     </div> <br><br>
+           
         <!-- End Education -->
 
 
@@ -214,36 +161,21 @@
         </div> <br> <br>
 
       
-        <div class="container">    
-        
-        <div class="tile is-ancestor">       
+   <div class="container">          
+     <div class="tile is-ancestor">       
         <?php foreach ($portfolio as $key => $value): ?>
-          <div class="tile is-parent ">         
-            <article class="tile is-child box">         
-            <p class="title has-text-centered"> <?php echo $value['judul'] ?> </p>
-            <p class="subtitle has-text-centered"> <?php echo $value['sub'] ?> </p>
-            <a class="button is-link" href="<?php echo $value ['imgweb'] ?>" data-lightbox="<?php echo $value ['galeri'] ?>" 
-            data-title="<?php echo $value ['capt'] ?>">Tampilkan</a>
-            </article>
-          </div>
+           <div class="tile is-parent ">         
+                <article class="tile is-child box">         
+                   <p class="title has-text-centered"> <?php echo $value['judul'] ?> </p>
+                   <p class="subtitle has-text-centered"> <?php echo $value['sub'] ?> </p>
+                   <a  class="image is-3by1" href="portfolio.php?id=<?php echo $value['id'] ?>"> 
+                     <img src="<?php echo $value ['imgweb'] ?>">
+                   </a>
+                </article>
+            </div>
           <?php endforeach ?>
-          </div>
-          </div>
-            
-
-
-             <!-- Galery -->
-             
-           <a href="img\img2.jpg" data-lightbox="porto" data-title="Tampilan Galeri"></a>
-           <a href="img\img3.jpg" data-lightbox="porto" data-title="Tampilan Contact"></a>
-           <a href="img\light.jpg" data-lightbox="edit" data-title="Hasil edit Lightroom CC"></a>
-           <a href="img\rpl.jpg" data-lightbox="edit" data-title="Hasil edit desain kelas RPL"></a>
-           <a href="img\host2.jpg" data-lightbox="comp" data-title=" Tampilan team dan testimoni"></a>
-           <a href="img\host3.jpg" data-lightbox="comp" data-title=" Tampilan Contact"></a>
-            
-
-         
-
+        </div>
+    </div>
         <br> <br> 
         <!-- End Portfolio --> 
 
@@ -252,7 +184,7 @@
             <h1 class="title"> Contact </h1>
         </div>
 
-<form action="send.php" method="post">
+  <form action="send.php" method="post">
      <div class="container">
            <div class="field">
               <label class="label">Name</label>
@@ -296,38 +228,26 @@
             </div>      
         </div>
       </div>
-    </form>
-        <br>
-          <br>
-      
+  </form><br><br>
+       
         <!--  End Contact -->
 
 
-
-       
           <!-- Footer -->
-          <div class="footerss">
+        
           <?php include 'footer.php'; ?>
-          </div>
-          <!-- End Footer -->
-        
           
-        
+          <!-- End Footer -->
+          <script type="text/javascript">
+              (function() {
+                var burger = document.querySelector('.burger');
+                var nav = document.querySelector('#'+burger.dataset.target);
+                burger.addEventListener('click', function(){
+                  burger.classList.toggle('is-active');
+                  nav.classList.toggle('is-active');
+                });
+              })();
+         </script>
 
-      <script src="dist/js/lightbox-plus-jquery.js"> </script>
-      <script>
-    lightbox.option({
-      'resizeDuration': 250,
-      'fadeDuration' : 500,
-      'wrapAround': true,
-      'alwaysShowNavOnTouchDevices' : true
-    })
-    </script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
-<script>
-$.validate({
-  });
-  </script>
     </body>
 </html>
