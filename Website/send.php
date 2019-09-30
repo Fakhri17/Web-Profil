@@ -6,7 +6,7 @@
   </div>
 </div>     
 
-      <?php	if( isset ($_POST['Email'])){	?>
+      <?php	if( isset ($_POST['Email'])):	?>
 
      <div class="container">
       <div class="notification is-primary">
@@ -19,9 +19,7 @@
      </div>
      
      <?php
-      }
-      else
-      { 
+        else:
       ?>
 
       <div class="container">
@@ -35,7 +33,7 @@
         <?php 
           	header( "refresh:1.5;url=index.php" );
           	die();	
-          	}
+            endif;
       	?>
 
      <script>

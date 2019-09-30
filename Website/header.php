@@ -144,30 +144,12 @@
           ],
           'komplit' => 'Completed : 16 March 2019',
           'id' => '0',
-          'button' => [
-            'button is-rounded is-danger',
-            'button is-primary is-rounded',
-            'button is-link is-rounded',
-            'button is-info is-rounded',
+          'tag' => [
+            ['class'=>'button is-rounded is-danger','label' => 'HTML'],
+            ['class'=>'button is-rounded is-primary','label' => 'CSS'],
+            ['class'=>'button is-rounded is-link','label' => 'JavaScript'],
+            ['class'=>'button is-rounded is-info','label' => 'Boostrap'],
           ],
-          'label' => [
-              'HTML',
-              'CSS',
-              'JavaScript',
-              'Boostrap',
-          ],
-          'imgweb1' => [
-            'img\image.jpg',
-            'img\img2.jpg',
-            'img\img3.jpg'
-          ],
-          'title' => [
-            'Tampilan awal',
-            'Tampilan Galeri',
-            'Tampilan Contact',
-          ],
-         
-    
         ],
 
         [
@@ -186,29 +168,13 @@
           ],
           'komplit' => 'Completed : 26 November 2019',
           'id' => '1',
-          'button' => [
-            'button is-rounded is-danger',
-            'button is-primary is-rounded',
-            'button is-link is-rounded',
-            'button is-info is-rounded',
+          'tag' => [
+            ['class'=>'button is-rounded is-danger','label' => 'Lightroom'],
+            ['class'=>'button is-rounded is-primary','label' => 'Pixellab'],
+            ['class'=>'button is-rounded is-link','label' => 'Photoshop'],
+            ['class'=>'button is-rounded is-info','label' => 'PsTouch'],
           ],
-          'label' => [
-              'Lightroom',
-              'Pixellab',
-              'Photoshop',
-              'PsTouch',
-          ],
-          'imgweb1' => [
-            'img\rpl.jpg',
-            'img\bio.jpg',
-            'img\light.jpg'
-          ],
-          'title' => [
-            'Pembuatan desain sticker',
-            'Hasil edit desain kelas RPL',
-            'Hasil edit Lightroom CC',
-          ],
-
+         
         ],
 
         [
@@ -227,27 +193,11 @@
           ],
           'komplit' => 'Completed : 12 September 2019',
           'id' => '2', 
-          'button' => [
-            'button is-rounded is-danger',
-            'button is-primary is-rounded',
-            'button is-link is-rounded',
-            'button is-info is-rounded',
-          ],
-          'label' => [
-              'HTML',
-              'CSS',
-              'JavaScript',
-              'PHP'
-          ],
-          'imgweb1' => [
-            'img\host.jpg',
-            'img\host2.jpg',
-            'img\host3.jpg'
-          ],
-          'title' => [
-            'Tampilan Header',
-            'Tampilan team dan testimoni',
-            'Tampilan Contact',
+          'tag' => [
+            ['class'=>'button is-rounded is-danger','label' => 'HTML'],
+            ['class'=>'button is-rounded is-primary','label' => 'CSS'],
+            ['class'=>'button is-rounded is-link','label' => 'JavaScript'],
+            ['class'=>'button is-rounded is-info','label' => 'PHP'],
           ],
        
         ],

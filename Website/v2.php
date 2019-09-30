@@ -169,7 +169,7 @@
                    <p class="title has-text-centered"> <?php echo $value['judul'] ?> </p>
                    <p class="subtitle has-text-centered"> <?php echo $value['sub'] ?> </p>
                    <a  class="image is-3by1" href="portfolio.php?id=<?php echo $value['id'] ?>"> 
-                     <img src="<?php echo $value ['imgweb'] ?>">
+                     <img src="<?php echo $value ['imgweb'][0] ?>">
                    </a>
                 </article>
             </div>
