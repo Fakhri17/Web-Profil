@@ -54,17 +54,19 @@
         </div>
     </div>
     <?php include 'footer.php'; ?>
+
     <?php else: ?>
     <div class="text2">
         <div class="container has-text-centered">
             <h1 class="title is-italic"> Tampilan Tidak tersedia </h1>
+            <a class="button" onclick="goBack()"> <- Back </a>
         </div>
     </div>
 
 
+
 <?php
-	header( "refresh:2; url=v2.php" );
-	die();
+
 	endif; 
 ?>
      <script>
