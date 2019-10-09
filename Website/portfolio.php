@@ -36,6 +36,8 @@
                 </div>
             </div>
             <div class="tile is-4 is-vertical is-parent">
+                <!--filtered = cari yg indexnya != 0
+                foreach (filtered as ) -->
                 <div class="tile is-child box">
                   <a href="<?php echo $portfolio [$id]['imgweb'][1] ?>" 
                      data-lightbox="<?php echo $portfolio [$id]['galeri'] ?>" 

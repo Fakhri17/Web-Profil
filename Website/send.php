@@ -11,7 +11,7 @@
      <div class="container">
       <div class="notification is-primary">
        <div class="textpf has-text-justified is-family-monospace">
-          <h1> Aku akan kirim balik melalui emailmu <strong><?php echo  $_POST['Email']; ?>
+          <h1> Aku akan kirim kembali pesan ini melalui email <strong><?php echo  $_POST['Email']; ?>
           </strong></h1>
         </div> 
        </div>
@@ -36,7 +36,7 @@
             endif;
       	?>
 
-     <script>
+      <script>
          function goBack() {
          window.history.back(-1);
         }
